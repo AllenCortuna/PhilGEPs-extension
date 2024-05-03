@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "PhilGEPs Auto-Fill Extension",
+  "version": "1.0",
+  "icons": {
+    "16": "PhilGEPs Logo.png",  
+    "48": "PhilGEPs Logo.png",  
+    "128": "PhilGEPs Logo.png" 
+  },
+  "permissions": ["tabs", "activeTab"],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "PhilGEPs Auto-Fill Extension"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://notices.philgeps.gov.ph/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
